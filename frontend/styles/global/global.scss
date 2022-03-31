@@ -1,5 +1,21 @@
+/*
+    Global scss is used to give global styles to the whole app (both presentation and faq pages).
+    Global scss import some partials, which are configs or other things.
+*/
+
+@import "_config";
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+}
+
+//Scaling everything to 10px by default.
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
