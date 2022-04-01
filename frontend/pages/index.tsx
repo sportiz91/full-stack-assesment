@@ -1,31 +1,57 @@
 import React from "react"
 import Link from "next/link"
+import styles from "../styles/component/Home.module.scss";
+
+import { FiGithub, FiTwitter } from "react-icons/fi"
+
 
 const HomePage: React.FC = () => {
   return (
-    <div>
-      <div>
-        <h1>Meta-Carbon Coding Challenge</h1>
-      </div>
-
-      <div>
-        <div>
-          <p>Coder: Santiago Pablo Ortiz</p>
-          <img src="" alt="" />
+    <div className={styles.homeWrapper}>
+      <div className={styles.homeLayout}>
+        <div className={styles.headingBg}>
+          <h1>Meta-Carbon Coding Challenge</h1>
         </div>
 
-        <div>
-          <p>Reach me out</p>
-          <div>
-            <p>Add Portfolio Website</p>
-            <p>Add GitHub Profile (Everything with emoticons)</p>
+        <div className={styles.homeInfo}>
+          <div className={styles.homeInfoRow}>
+            <p>Coder: Santiago Pablo Ortiz</p>
+            <div>          
+              <img src="/images/me1.jpg" alt="author-picture" />
+            </div>
+
+          </div>
+
+          <div className={styles.homeInfoRow}>
+            <p>Reach me out</p>
+            <div>
+              <a href="https://www.github.com/sportiz91/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+              >
+                <FiGithub size={"2.1rem"} />
+              </a>
+
+              <a href="https://www.twitter.com/sportiz91/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+              >
+                <FiTwitter size={"2.1rem"} />
+              </a>    
+            </div>
           </div>
         </div>
-      </div>
 
-      <Link href="/faq">
-        <a>Go to the FAQ Section</a>
-      </Link>
+
+          <Link href="/faq" >
+            <div className={styles.homeAnchorButton}>
+              <a>Go to the FAQ Section</a>
+            </div>
+            
+          </Link>
+
+
+      </div>
     </div>
   )
 }
