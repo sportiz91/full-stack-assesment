@@ -1,0 +1,117 @@
+@import "_config";
+
+.faqListItemWrapper {
+    border-bottom: 2px solid $item-border;
+}
+
+.faqListItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    color: $item-color;
+
+    cursor: pointer;
+    @include transition-color-ease;
+
+    &:hover {
+        color: $item-hover-color;
+
+        i {
+            border: 2px solid $item-hover-color;
+
+            &:before, &:after {
+                background-color: $item-hover-color;
+            }
+        }
+    }
+
+    p {
+        font-size: 2.6rem;
+        font-weight: 700;
+    }
+
+    &.open {
+        color: $item-hover-color;
+
+        i {
+            border: 2px solid $item-hover-color;
+
+            &:before, &:after {
+                background-color: $item-hover-color;
+            }
+
+            &:after {
+                transform: scale(0);
+            }
+        }
+    }
+}
+
+
+.circePlusMinus {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    border: 2px solid $button-color;
+    background: transparent;
+    position: relative;
+    @include transition-all-ease;
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 14px;
+        background-color: $button-color;
+        top: 14px;
+        left: 6px;
+        margin-top: -2px;
+        @include transition-all-ease;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 14px;
+        width: 2px;
+        background-color: $button-color;
+        top: 6px;
+        left: 14px;
+        margin-left: -2px;
+        transform: scale(1);
+        @include transition-all-ease;
+    }
+}
+
+.faqListDescription {
+    overflow: hidden;
+    margin-bottom: 3rem;
+
+    p {
+        font-size: 2rem;
+        color: $item-description-color;
+        font-weight: 300;
+    }
+}
+
+.descriptionEnter {
+    height: 0;
+}
+
+.descriptionEnterActive {
+    height: 180px;    
+    transition: all 0.4s linear;
+}
+
+  
+.descriptionExit {
+    height: 180px;
+}
+  
+.descriptionExitActive {
+    height: 0;
+    margin-bottom: 0;
+    transition: all 0.4s linear;
+}
+  
