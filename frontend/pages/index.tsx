@@ -56,6 +56,8 @@ const HomePage: NextPage = (): JSX.Element => {
             
           </Link>
 
+          {/* <button className={`${styles.homeHitApiButton} ${styles.special}`} onClick={() => hitExternalApi()}>Hit External API Button</button> */}
+
 
       </div>
     </div>

@@ -31,13 +31,13 @@ const FaqItem: NextPage<Props> = ({ faqName, faqDescription }): JSX.Element => {
             enterActive: styles.descriptionEnterActive,
             exit: styles.descriptionExit,
             exitActive: styles.descriptionExitActive
-          }} timeout={400} in={show} unmountOnExit>
+          }} timeout={200} in={show} unmountOnExit>
           <div className={styles.faqListDescription}>
             <p>{faqDescription}</p>
           </div>
         </CSSTransition>
   
-
+        
 
       </div>
 

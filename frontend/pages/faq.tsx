@@ -41,6 +41,9 @@ const FaqSection: NextPage<Props> = ({ faqs }): JSX.Element => {
             <ul className={styles.faqListContainer}>
               {renderList()}
             </ul>
+            <p className={styles.faqFinalParagraph}>If you have any further questions, please contact us at 
+              <a href="mailto:info@standfortrees.org"> info@standfortrees.org.</a>
+            </p>
           </section>
         </div>
       </MenuAndFooter>
@@ -58,7 +61,24 @@ try {
   console.log("posts variable:")
   console.log(resultObject);
 
-  const faqs: Faqs[] = resultObject.data
+  let faqs: Faqs[] = resultObject.data
+
+  faqs = faqs.map((faq, index) => {
+    const previous: string = faq.attributes.faqDescription;
+    const stringSanatized: string = (previous.replace(/\[(.+?)\]\((https?:\/\/[a-zA-Z0-9/.(]+?)\)/g, '<a href="$2">$1</a>'));
+    console.log(stringSanatized)
+
+    const idx: number = index + 1;
+
+    return {
+      id: idx,
+      attributes: {
+        faqName: faq.attributes.faqName,
+        faqDescription: stringSanatized,
+      }
+
+    }
+  })
 
   return { props: { faqs } }
 

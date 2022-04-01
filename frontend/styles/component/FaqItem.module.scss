@@ -93,7 +93,7 @@
         color: $item-description-color;
         font-weight: 300;
     }
-}
+} 
 
 .descriptionEnter {
     height: 0;
@@ -101,7 +101,7 @@
 
 .descriptionEnterActive {
     height: 180px;    
-    transition: all 0.4s linear;
+    transition: all 0.2s linear;
 }
 
   
@@ -112,6 +112,6 @@
 .descriptionExitActive {
     height: 0;
     margin-bottom: 0;
-    transition: all 0.4s linear;
+    transition: all 0.2s linear;
 }
   

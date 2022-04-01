@@ -67,7 +67,7 @@
     }
 }
 
-.homeAnchorButton {
+.homeAnchorButton, .homeHitApiButton {
     padding: 2rem;
     font-size: 1.5rem;
     font-weight: 500;
@@ -80,3 +80,14 @@
         background-color: $anchor-hover-color;
     }
 }
+
+.homeHitApiButton.special {
+    background-color: white;
+    margin-top: 2rem;
+    font-weight: 500;
+
+    &:hover {
+        background-color: $anchor-hover-color;
+    }
+}
+
