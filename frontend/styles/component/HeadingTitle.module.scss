@@ -1,0 +1,27 @@
+@import "_config";
+
+.base {
+    background-color: $header-bg-color;
+    color: set-text-color($header-bg-color);
+    padding: 2.5rem;
+    margin-bottom: 6rem;
+    border-radius: 10px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+
+    & h1 {
+        font-size: 4.2rem;
+        text-align: center;
+    }
+}
+
+.faq {
+    max-width: 620px;
+}
+
+.base.faq {
+    border-radius: 0;
+    position: relative;
+    bottom: 65px;
+    margin-bottom: 1rem;
+}

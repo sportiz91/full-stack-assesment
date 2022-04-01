@@ -1,17 +1,23 @@
-import React from "react"
+import type { NextPage } from "next";
 import Link from "next/link"
+
 import styles from "../styles/component/Home.module.scss";
+
+import HeaderLayout from "../components/HeaderLayout";
+import HeadingTitle from "../components/HeadingTitle";
 
 import { FiGithub, FiTwitter } from "react-icons/fi"
 
 
-const HomePage: React.FC = () => {
+const HomePage: NextPage = (): JSX.Element => {
   return (
     <div className={styles.homeWrapper}>
+
+      <HeaderLayout title="Home | Stand For Trees" />
+
       <div className={styles.homeLayout}>
-        <div className={styles.headingBg}>
-          <h1>Meta-Carbon Coding Challenge</h1>
-        </div>
+
+        <HeadingTitle description="Meta-Carbon Coding Challenge" />
 
         <div className={styles.homeInfo}>
           <div className={styles.homeInfoRow}>

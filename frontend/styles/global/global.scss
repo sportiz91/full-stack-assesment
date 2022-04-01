@@ -11,7 +11,7 @@
 *, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 // --DEV: Scaling everything to 10px by default.

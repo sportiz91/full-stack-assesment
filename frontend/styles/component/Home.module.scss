@@ -9,7 +9,7 @@
 
 .homeLayout {
     width: 50%;
-    max-width: 1080px;
+    max-width: 730px;
     margin: 0 auto;
 
     display: flex;
@@ -19,23 +19,12 @@
 
 }
 
-.headingBg {
-    background-color: $header-bg-color;
-    color: set-text-color($header-bg-color);
-    padding: 2.5rem;
-    margin: 0 2rem 3rem;
-
-    & h1 {
-        font-size: 4.2rem;
-        text-align: center;
-    }
-}
-
 .homeInfo {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 0 3rem;
 }
 
 .homeInfoRow {
@@ -46,6 +35,7 @@
 
     p {
         font-size: 2.6rem;
+        font-weight: 500;
     }
 
     img {
@@ -80,6 +70,7 @@
 .homeAnchorButton {
     padding: 2rem;
     font-size: 1.5rem;
+    font-weight: 500;
     border: 1px solid $item-color;
     border-radius: 10px;
     cursor: pointer;
